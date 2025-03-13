@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ComputadoraController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -32,6 +33,7 @@ Route::get("/saludar/{nombre?}",function ($nombre=""){
 // // 
 // // 
 Route::resource("computadoras", ComputadoraController::class);
+Route::resource("usuarios", UsuarioController::class);
 
 
 
