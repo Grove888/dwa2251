@@ -23,14 +23,14 @@ Route::get("/saludar/{nombre?}",function ($nombre=""){
 // PUT    computadoras/{computadora}
 // DELETE computadoras/{computadora}
 
-// resource('computadoras',ComputadoraController)
-Route::get('computadore/crear',"App\Http\Controllers\ComputadoraController@crear");
-Route::get('computadore/mostrar/{cual}',[ComputadoraController::class, 'mostrar']);
-Route::get('computadore/actualizar/{cual}',[ComputadoraController::class, 'actualizar']);
-Route::get('computadore/borrar/{cual}',[ComputadoraController::class, 'borrar']);
-// 
-// 
-// 
+// // resource('computadoras',ComputadoraController)
+// Route::get('computadore/crear',"App\Http\Controllers\ComputadoraController@crear");
+// Route::get('computadore/mostrar/{cual}',[ComputadoraController::class, 'mostrar']);
+// Route::get('computadore/actualizar/{cual}',[ComputadoraController::class, 'actualizar']);
+// Route::get('computadore/borrar/{cual}',[ComputadoraController::class, 'borrar']);
+// // 
+// // 
+// // 
 Route::resource("computadoras", ComputadoraController::class);
 
 
