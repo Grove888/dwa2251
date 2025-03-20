@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Usuario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UsuarioController extends Controller
 {
@@ -32,6 +33,7 @@ class UsuarioController extends Controller
     {
         $nuevo = new Usuario();
         $nuevo->fill($request->all());
+        $nuevo->clave = Hash::make($request->clave);
         $nuevo->save();
         return redirect(route('usuarios.index'));
     }
@@ -70,5 +72,10 @@ class UsuarioController extends Controller
     {
         $usuario->delete();
         return redirect(route('usuarios.index'));
+    }
+
+    public function register()
+    {
+        return view('puerta.register');
     }
 }

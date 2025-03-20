@@ -15,7 +15,8 @@ Route::get("/saludar/{nombre?}",function ($nombre=""){
 
 Route::get('login',[PuertaController::class, 'login']);
 Route::post('validar',[PuertaController::class, 'validar'])->name('puerta.validar');
-
+Route::get('register',[UsuarioController::class, 'register'])->name('register');
+Route::post('register',[UsuarioController::class, 'store'])->name('register.store');
 
 //Route Model Binding
 //CRUD
